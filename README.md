@@ -12,7 +12,7 @@ react-native-app-intro is a react native component implementing a parallax effec
 <a href="http://www.freepik.com">Designed by Freepik</a>
 
 ### Update from FuYaoDe/react-native-app-intro
-- Add autoplay
+- Add autoplay & autoplayTimeout
 - Add npmignore
 - Add allowFontScaling & fontSize props for Skip, Next, and Done labels
 
@@ -187,6 +187,8 @@ And in Android, image inside view component, view need width、height.
 | showDots | bool | true | a boolean that defines if we should render the bottom dots |
 | allowFontScaling | bool | true | a boolean that defines if we should allow font scaling on devices with larger text sizes enabled |
 | fontSize | number | 22 | a number that specifies the size of the Skip, Done, and Next labels |
+| autoplay | bool | false | Set to `true` enable auto play mode. |
+| autoplayTimeout | number | 4 | Delay between auto play transitions (in second). |
 
 ##### **Children View Properties**
 | Prop  | PropType | Default Value | Description           |
