@@ -11,10 +11,15 @@ react-native-app-intro is a react native component implementing a parallax effec
 
 <a href="http://www.freepik.com">Designed by Freepik</a>
 
+### Update from FuYaoDe/react-native-app-intro
+- Add autoplay
+- Add npmignore
+- Add allowFontScaling & fontSize props for Skip, Next, and Done labels
+
 ### Installation
 
 ```bash
-$ npm i react-native-app-intro --save
+$ npm i react-native-app-intro-v2 --save
 ```
 
 ### Basic Usage
@@ -179,6 +184,8 @@ And in Android, image inside view component, view need width、height.
 | showSkipButton | bool | true | a boolean defining if we should render the skip button |
 | showDoneButton | bool | true | a boolean that defines if we should render the done button |
 | showDots | bool | true | a boolean that defines if we should render the bottom dots |
+| allowFontScaling | bool | true | a boolean that defines if we should allow font scaling on devices with larger text sizes enabled |
+| fontSize | number | 22 | a number that specifies the size of the Skip, Done, and Next labels |
 
 ##### **Children View Properties**
 | Prop  | PropType | Default Value | Description           |
