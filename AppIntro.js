@@ -5,7 +5,6 @@ import {
   StyleSheet,
   Text,
   View,
-  TouchableOpacity,
   Animated,
   Dimensions,
   Image,
@@ -333,7 +332,11 @@ export default class AppIntro extends Component {
     }
 
     if (this.isToTintStatusBar()) {
-      StatusBar.setBackgroundColor(this.shadeStatusBarColor(this.props.pageArray[0].backgroundColor, -0.3), false);
+      const statusBarColor = this.props.pageArray[0].statusBarColor || this.props.pageArray[0].backgroundColor || undefined;
+
+      if (statusBarColor) {
+        StatusBar.setBackgroundColor(this.shadeStatusBarColor(statusBarColor, -0.3), false);
+      }
     }
 
     return (
@@ -346,7 +349,11 @@ export default class AppIntro extends Component {
           renderPagination={this.renderPagination}
           onMomentumScrollEnd={(e, state) => {
             if (this.isToTintStatusBar()) {
-              StatusBar.setBackgroundColor(this.shadeStatusBarColor(this.props.pageArray[state.index].backgroundColor, -0.3), false);
+             const statusBarColor = this.props.pageArray[state.index].statusBarColor || this.props.pageArray[state.index].backgroundColor || undefined;
+
+             if (statusBarColor) {
+                StatusBar.setBackgroundColor(this.shadeStatusBarColor(statusBarColor, -0.3), false);
+             }
             }
 
             this.props.onSlideChange(state.index, state.total);
