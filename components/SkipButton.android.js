@@ -11,7 +11,6 @@ export const SkipButton = ({
   leftTextColor,
   skipBtnLabel,
   skipFadeOpacity,
-  skipFadeOpacity,
   allowFontScaling,
   fontSize
 }) => {
