@@ -342,6 +342,7 @@ export default class AppIntro extends Component {
         <Swiper
           loop={false}
           index={this.props.defaultIndex}
+          autoplay={this.props.autoplay}
           renderPagination={this.renderPagination}
           onMomentumScrollEnd={(e, state) => {
             if (this.isToTintStatusBar()) {
@@ -396,6 +397,7 @@ AppIntro.defaultProps = {
   rightTextColor: '#fff',
   leftTextColor: '#fff',
   pageArray: [],
+  autoplay: false,
   onSlideChange: () => {},
   onSkipBtnClick: () => {},
   onDoneBtnClick: () => {},
