@@ -1,5 +1,5 @@
 import assign from 'assign-deep';
-import React, { Component } from 'react';
+import React, { Component } from 'react-native';
 import PropTypes from 'prop-types';
 import {
   StatusBar,
@@ -11,6 +11,7 @@ import {
   Image,
   Platform
 } from 'react-native';
+
 import Swiper from 'react-native-swiper';
 import DoneButton from './components/DoneButton';
 import SkipButton from './components/SkipButton';
